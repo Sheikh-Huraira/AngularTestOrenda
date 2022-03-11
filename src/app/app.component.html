@@ -3,44 +3,6 @@
 <p>
   {{title}}
 </p>
-<form>
-  <label for="name">Name: </label>
-<input id="name" type="text" [formControl]="name">
-
-
-<div>
-  Select your subject:
-  <select (change) = "subjects($event)" name="month">
-      <option *ngFor = "let i of Subjects">{{i}}</option>
-  </select>
-</div>
-
-<label for="obtain_marks">Obtained Marks: </label>
-<input id="obtain_marks" type="number" [formControl]="obtain_marks">
-
-<label for="total_marks">Obtained Marks: </label>
-<input id="total_marks" type="number" [formControl]="total_marks">
-
-<input type="submit" value="Submit">
-<button (click) = "myclickfunction($event)">
-  Add Values
-  </button>
-</form>
-
-
-
-<div class="form-group">
-  <label for="power">Hero Power</label>
-  <select class="form-control" id="power" required>
-    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-  </select>
-</div>
-<input type="text" class="form-control" id="name"
-       required
-       [(ngModel)]="model.name" name="name">
-TODO: remove this: {{model.name}}
-
-<form #heroForm="ngForm"></form>
 
 -->
 
@@ -128,24 +90,6 @@ TODO: remove this: {{model.name}}
 <p><b>Sum of Obtained Marks of all students are:{{sum}}</b></p>
 <!--
    (click)="resultForm.reset()"
-  <div [hidden]="!submitted">
-    <h2>You submitted the following:</h2>
-    <div class="row">
-      <div class="col-xs-3">Name</div>
-      <div class="col-xs-9">{{ model.name }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Alter Ego</div>
-      <div class="col-xs-9">{{ model.alterEgo }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3">Power</div>
-      <div class="col-xs-9">{{ model.power }}</div>
-    </div>
-    <br>
-    <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
-  </div>
-</div>
 <input type="text" #box 
   <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
 (keyup)="getname(box.value)"
